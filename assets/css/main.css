@@ -18,12 +18,14 @@ button,
 input,
 select,
 textarea {
+	
     color: #222;
 }
 
 body {
     font-size: 1em;
     line-height: 1.4;
+    overflow-x: hidden;
 }
 
 /*
@@ -237,8 +239,8 @@ margin-bottom: 20px;
 }
 
 .head-order {
+  font-size: 25px;	
   color: #4caf50;
-  background-color: #fff;
   border-color: transparent;
   display: inline-block;
   padding: 6px 40px;
@@ -301,7 +303,7 @@ padding-top: 15px;
 }
 
 .borderwhite {
-background-color: rgba(255, 255, 255, 0.4);
+background-color: rgba(255, 255, 255, 0.8);
 border: 1px solid transparent;
 border-radius: 10px;
 padding-bottom: 10px;
