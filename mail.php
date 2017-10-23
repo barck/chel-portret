@@ -13,7 +13,7 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/icomoon.css">
     <link href="assets/css/animate-custom.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" />
 
     <link href="https://fonts.googleapis.com/css?family=Exo+2:300,700&amp;subset=cyrillic" rel="stylesheet"
           type="text/css">
@@ -26,6 +26,7 @@
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
     <![endif]-->
+    <meta http-equiv="refresh" content="5; url=http://chel-portret.ru">
 </head>
 
 <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
@@ -69,6 +70,16 @@
 
 <!-- ==== HEADERWRAP ==== -->
 <div id="headerwrap" name="home">
+<h2><?php
+$email = $_POST['email'];
+$tel = $_POST['tel'];
+# отправка данных на мыло админу
+    if (mail("artiv09@gmail.com", "Заказ с сайта ПОП-АРТ", "\nЕмаил:".$email . "\nТелефон:". $tel,"From: admin@chel-portret.ru \r\n")){ 
+    echo "Заявка успешно отправлена, скоро с вами свяжутся!"; 
+}else{ 
+    echo "при отправке сообщения возникли ошибки"; 
+}
+?></h2>
     <header class="clearfix">
         <div class="col-sm-12 hidden-lg hidden-md hidden-xs">
             <h2 class="margindown"><span class="back_name">ПОП-АРТ ПОРТРЕТ</span><br><span class="back2_name">СТИЛЬНЫЙ, МОДНЫЙ, ОРИГИНАЛЬНЫЙ ПОДАРОК</span></h2>
@@ -90,10 +101,7 @@
                 </h1>
                 <h2 class="hidden-lg"><span class="back_name">ПОП-АРТ ПОРТРЕТ</span><br><span class="back2_name">СТИЛЬНЫЙ, МОДНЫЙ, ОРИГИНАЛЬНЫЙ ПОДАРОК</span>
                 </h2>
-                
-                
-            </div>
-        </div>
+                        </div>
     </header>
 </div><!-- /headerwrap -->
 
